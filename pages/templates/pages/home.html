@@ -1,71 +1,30 @@
 {% extends "base.html" %}
-
-
+<style>
+{% block styles %}
+{% if page_obj.nav_color != '#000000' %}
+    .navbar-inverse{
+      background-color: {{ page_obj.nav_color }};
+      border-color: {{ page_obj.nav_color }};
+    }
+  {% endif %}
+  {% if page_obj.show_nav %}
+  body{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    }
+  {% endif %}
+  {% endblock styles %}
+</style>
 {% block content %}
 <body>
-
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Ousseynou Diop</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <!-- <form class="navbar-form navbar-right">
-                <div class="form-group">
-                  <input type="text" placeholder="Email" class="form-control">
-                </div>
-                <div class="form-group">
-                  <input type="password" placeholder="Password" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-success">Sign in</button>
-              </form> -->
-            </div><!--/.navbar-collapse -->
-          </div>
-        </nav>
-    
+        {% if page_obj.show_nav %}
+        {% include 'navbar.html' %}
+        {% endif %} 
         <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="jumbotron">
-    
-          <div class="container">
-            <h1>{{ page_obj.title }}</h1>
-            <p>{{ page_obj.title_description|linebreaks }}</p>
-            {% if title_btn_url %}
-            <p><a class="btn btn-primary btn-lg" href="{{ page_obj.title_btn_url }}" role="button">{{ page_obj.title_btn }} &raquo;</a></p>
-            {% endif %}
-          </div>
-
-        </div>
-    
-        <div class="container">
-          <!-- Example row of columns -->
-          <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-            <div class="col-xs-4">
-              <h2>join Us</h2>
-              </div>
-              <p>
-                <div class="col-xs-8">
-                {% include 'pages/snippet/join-form.html' with form=form %}
-              </div>
-            </div>
-              </p>
-             </div>
-          </div>
-          </div>
-          <div class="container">
-            {{ page_obj.content|safe }}
-          </div>
-          <div class="container">
-          <footer>
-            <p>&copy; 2018 Xarala, Inc.</p>
-          </footer>
-        </div>
-        </div> <!-- /container -->
+        {% if page_obj.layout == 'stacked' %}
+        {% include 'pages/snippet/stacked_layout.html' with page_obj=page_obj %}
+        {% else %}
+        {% include 'pages/snippet/standard_layout.html' with page_obj=page_obj %}
+         {% endif %}
 {% endblock content %}
     
