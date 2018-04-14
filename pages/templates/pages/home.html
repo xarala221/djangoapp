@@ -50,17 +50,8 @@
               <h2>join Us</h2>
               </div>
               <p>
-                  <div class="col-xs-8">
-                <form action="" method="post" class="inline-form">{% csrf_token %}
-                  <div class="form-group">
-                      <!-- {{ form.as_p }} -->
-                      <div class="input-group">
-                      <input type="email" class="form-control" placeholder="jane.doe@example.com">
-                      <span class="input-group-btn">
-                      <input type="submit" value="Join" class="btn btn-default"></span>
-                  </div>
-                </div>
-                </form>
+                <div class="col-xs-8">
+                {% include 'pages/snippet/join-form.html' with form=form %}
               </div>
             </div>
               </p>
@@ -72,7 +63,7 @@
           </div>
           <div class="container">
           <footer>
-            <p>&copy; 2016 Company, Inc.</p>
+            <p>&copy; 2018 Xarala, Inc.</p>
           </footer>
         </div>
         </div> <!-- /container -->
