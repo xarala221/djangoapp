@@ -31,31 +31,22 @@
     
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
+    
           <div class="container">
-            <h1>Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+            <h1>{{ page_obj.title }}</h1>
+            <p>{{ page_obj.title_description|linebreaks }}</p>
+            {% if title_btn_url %}
+            <p><a class="btn btn-primary btn-lg" href="{{ page_obj.title_btn_url }}" role="button">{{ page_obj.title_btn }} &raquo;</a></p>
+            {% endif %}
           </div>
+
         </div>
     
         <div class="container">
           <!-- Example row of columns -->
           <div class="row">
             <div class="col-md-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-           </div>
-            <div class="col-md-4">
               <h2>join Us</h2>
-              <!-- <p>
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd8NAQUIBmwtqqduuDrbLfczxjfLIaXVn3Sz_u0JXOM8nxJfg/viewform?embedded=true" width="400" height="200" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-              </p>-->
               <p>
                 <form action="" method="post">{% csrf_token %}
                   {{ form.as_p }}
@@ -64,8 +55,10 @@
               </p>
              </div>
           </div>
-    
-          <hr>
+          </div>
+          <div class="container">
+            {{ page_obj.content|safe }}
+          </div>
     
           <footer>
             <p>&copy; 2016 Company, Inc.</p>

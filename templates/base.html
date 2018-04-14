@@ -24,7 +24,15 @@
     <![endif]-->
   </head>
   <body>
-      
+      {% if messages %}
+      <div class="container">
+      <div class="alert alert-success">
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+      </div>
+    </div>
+      {% endif %}
       {% block content %}
       
       {% endblock content %}
