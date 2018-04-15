@@ -4,10 +4,35 @@
     "pk": 1,
     "fields": {
         "title": "Ousseynou Diop",
-        "title_description": "Welcome and join me",
+        "title_description": "D\u00e9veloppeur Web & Tutorial Maker",
         "title_btn": "Join",
         "title_btn_url": null,
-        "content": "<div class=\"container\">\r\n      <!-- Example row of columns -->\r\n      <div class=\"row\">\r\n        <div class=\"col-md-4\">\r\n          <h2>Heading</h2>\r\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\r\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n          <h2>Heading</h2>\r\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\r\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\r\n       </div>\r\n        <div class=\"col-md-4\">\r\n          <h2>Heading</h2>\r\n          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\r\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\r\n        </div>\r\n      </div>\r\n\r\n      <hr>"
+        "content": "<div class=\"container\">\r\n      <!-- Example row of columns -->\r\n      <div class=\"row\">\r\n        <div class=\"col-md-4\">\r\n          <h2>Heading</h2>\r\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\r\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n          <h2>Heading</h2>\r\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\r\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\r\n       </div>\r\n        <div class=\"col-md-4\">\r\n          <h2>Heading</h2>\r\n          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\r\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\r\n        </div>\r\n      </div>\r\n\r\n      <hr>",
+        "slug": "page-slug",
+        "show_nav": true,
+        "nav_color": "#05ffba",
+        "layout": "stacked",
+        "video_embed": "<iframe  class=\"embed-responsive-item\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ZZBQG1AkXDk\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>",
+        "featured": false,
+        "active": true
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 2,
+    "fields": {
+        "title": "Ousseynou Diop2",
+        "title_description": "D\u00e9veloppeur Web & Tutorial Maker",
+        "title_btn": "Join",
+        "title_btn_url": null,
+        "content": "<div class=\"container\">\r\n      <!-- Example row of columns -->\r\n      <div class=\"row\">\r\n        <div class=\"col-md-4\">\r\n          <h2>Heading</h2>\r\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\r\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n          <h2>Heading</h2>\r\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\r\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\r\n       </div>\r\n        <div class=\"col-md-4\">\r\n          <h2>Heading</h2>\r\n          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\r\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\r\n        </div>\r\n      </div>\r\n\r\n      <hr>",
+        "slug": "ousseynou",
+        "show_nav": true,
+        "nav_color": "#000000",
+        "layout": "stacked",
+        "video_embed": "<iframe class=\"embed-responsive-item\"  width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/DkIkdoFV9JU?rel=0\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>",
+        "featured": true,
+        "active": true
     }
 }
 ]
