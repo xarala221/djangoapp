@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.signals import pre_save
 from django.core.exceptions import ValidationError
 
 # Create your models here.
@@ -7,6 +8,7 @@ LAYOUT_CHOICES = (
     ('standard', 'Standard'),
      ('stacked', 'Stacked')
                 )
+from pages.utils import unique_slug_generator
 
 def layout_validation(value):
     if value[0] != '#':
@@ -20,7 +22,7 @@ class Page(models.Model):
     title_btn           = models.CharField(max_length=50, blank=True, null=True, default="Join")
     title_btn_url       = models.CharField(max_length=50, blank=True, null=True)
     content             = models.TextField()
-    slug                = models.SlugField(default="page-slug")
+    slug                = models.SlugField(default="page-slug", blank=True)
     show_nav            = models.BooleanField(default=True)
     nav_color           = models.CharField(max_length=7, default="#000000", validators = [layout_validation])
     layout              = models.CharField(max_length=20, choices=LAYOUT_CHOICES, default="standard")
@@ -37,3 +39,9 @@ class Page(models.Model):
 
     def __str__(self):
         return self.title
+
+def pre_save_receiver_page_model(sender, instance, *args, **kwrgs):
+    if instance.slug == "page-slug" or instance.slug == "":
+       instance.slug = unique_slug_generator(instance)
+
+pre_save.connect(pre_save_receiver_page_model, sender=Page)
