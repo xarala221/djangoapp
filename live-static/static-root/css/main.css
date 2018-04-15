@@ -3,5 +3,5 @@ body {
     padding-bottom: 20px;
   }
   .sign-up-email{
-    width: 270px;
+    width: 270px !important;
   }
