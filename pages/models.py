@@ -22,6 +22,8 @@ class Page(models.Model):
     title_btn           = models.CharField(max_length=50, blank=True, null=True, default="Join")
     title_btn_url       = models.CharField(max_length=50, blank=True, null=True)
     content             = models.TextField()
+    jum_text_color      = models.CharField(max_length=7, default="#000000", validators = [layout_validation])
+    jum_bg_color        = models.CharField(max_length=7, default="#eeeeee", validators = [layout_validation])
     slug                = models.SlugField(default="page-slug", blank=True)
     show_nav            = models.BooleanField(default=True)
     nav_color           = models.CharField(max_length=7, default="#000000", validators = [layout_validation])
