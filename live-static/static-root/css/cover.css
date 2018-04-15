@@ -94,7 +94,10 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
-
+body{
+  padding-bottom: 0px;
+  padding-bottom: 0px;
+}
 @media (min-width: 768px) {
   .masthead-brand {
     float: left;
