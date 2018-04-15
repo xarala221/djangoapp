@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.messages.views import SuccessMessageMixin
-from django.views.generic import View, FormView, CreateView
+from django.views.generic import View, FormView, CreateView, DetailView
 from newsletter.forms import JoinForm
 from pages.models import Page
 # Create your views here. JoinFor
@@ -22,3 +22,7 @@ class HomeView(SuccessMessageMixin, CreateView):
 #class HomeView(View):
  #   def get(self, request, *args, **kwrgs):
   #      return render(request, "pages/home.html", {})
+
+class PageDetailView(DetailView):
+    queryset = Page.objects.filter(active=True)
+    model = Page
