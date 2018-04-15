@@ -29,6 +29,7 @@ class Page(models.Model):
     video_embed         = models.TextField(blank=True, null=True)
     featured            = models.BooleanField(default=False)
     active              = models.BooleanField(default=True)
+    leave_capture       = models.BooleanField(default=True)
 
     def save(self, *args, **kwrgs):
         if self.featured:

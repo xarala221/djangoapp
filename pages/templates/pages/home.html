@@ -29,8 +29,8 @@
         {% include 'pages/snippet/standard_layout.html' with object=object %}
          {% endif %}
 
-
-    
-
+  {% if object.leave_capture %}
+    <span class="leave-capture" shoow="true"></span>
+  {% endif %}
 {% endblock content %}
     
