@@ -13,7 +13,7 @@ class HomeView(SuccessMessageMixin, CreateView):
 
     def get_context_data(self, *args, **kwrgs):
         context = super(HomeView, self).get_context_data(*args, **kwrgs)
-        context['page_obj'] = Page.objects.all().first()
+        context['page_obj'] = Page.objects.filter(featured=True).first()
         return context
 
 
