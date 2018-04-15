@@ -3,7 +3,7 @@ from django import forms
 from newsletter.models import Join
 
 class JoinForm(forms.ModelForm):
-    email = forms.EmailField(label="", widget=forms.EmailInput(attrs={"placeholder": "Your email", "class": "form-control"}))
+    email = forms.EmailField(label="", widget=forms.EmailInput(attrs={"placeholder": "Your email", "class": "form-control sign-up-email"}))
     class Meta:
         model = Join
         fields = ['email']
